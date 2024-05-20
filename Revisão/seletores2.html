@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Seletores CSS</title>
+    <style>
+        body {
+            font-size: 30px;
+        }
+        /* Seletor de Tipo */
+        h1 {
+            color: darkblue;
+        }
+
+        /* Seletor de Classe */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Seletor de ID */
+        #unique {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Seletor de Atributo */
+        [data-info] {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Seletor de Atributo com Valor Específico */
+        [type="button"] {
+            background-color: lightgreen;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Pseudo-Classe :hover */
+        a:hover {
+            color: orange;
+        }
+
+        /* Pseudo-Classe :nth-child */
+        li:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        /* Pseudo-Classe :first-child */
+        p:first-child {
+            font-size: 1.5em;
+        }
+
+        /* Pseudo-Classe :last-child */
+        p:last-child {
+            font-style: italic;
+        }
+
+        /* Pseudo-Elemento ::before */
+        .quote::before {
+            content: "“";
+            font-size: 2em;
+            vertical-align: middle;
+            color: gray;
+        }
+
+        /* Pseudo-Elemento ::after */
+        .quote::after {
+            content: "”";
+            font-size: 2em;
+            vertical-align: middle;
+            color: gray;
+        }
+
+        /* Seletor Combinador de Descendentes */
+        .container p {
+            color: darkgreen;
+        }
+
+        /* Seletor Combinador de Filhos Diretos */
+        .container > p {
+            color: darkred;
+        }
+
+        /* Seletor de Grupo */
+        h2, .grouped {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Seletores CSS</h1>
+
+    <h2 class="highlight">Seletores de Classe e Tipo</h2>
+    <p>Este é um parágrafo normal.</p>
+    <p class="highlight">Este parágrafo está destacado.</p>
+
+    <p id="unique">Este parágrafo tem um ID único.</p>
+
+    <div class="container">
+        <p>Parágrafo dentro de um container.</p>
+        <p>Outro parágrafo dentro do mesmo container.</p>
+        <span>Texto dentro do container, mas não afetado pelo seletor de parágrafo.</span>
+    </div>
+
+    <div data-info="example">Div com atributo personalizado.</div>
+
+    <button type="button">Botão</button>
+
+    <a href="#">Link com hover</a>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <p class="quote">Esta é uma citação usando pseudo-elementos.</p>
+
+    <h2 class="grouped">Este é um título H2 agrupado com uma classe</h2>
+    <div class="grouped">Div agrupada</div>
+
+    <pre>
+Seletor de Tipo (h1):
+Aplica estilos a todos os elementos <h1>.
+
+Seletor de Classe (.highlight):
+Aplica estilos a todos os elementos com a classe highlight.
+
+Seletor de ID (#unique):
+Aplica estilos ao elemento com o ID unique.
+
+Seletor de Atributo ([data-info]):
+Aplica estilos a todos os elementos que possuem o atributo data-info.
+
+Seletor de Atributo com Valor Específico ([type="button"]):
+Aplica estilos a todos os elementos que possuem o atributo type com o valor button.
+
+Pseudo-Classe :hover:
+Aplica estilos aos elementos <a> quando são passados pelo mouse.
+
+Pseudo-Classe :nth-child(odd):
+Aplica estilos aos elementos <li> de índice ímpar.
+
+Pseudo-Classe :first-child:
+Aplica estilos ao primeiro <p> filho de seu pai.
+
+Pseudo-Classe :last-child:
+Aplica estilos ao último <p> filho de seu pai.
+
+Pseudo-Elemento ::before e ::after:
+Adiciona conteúdo antes e depois do conteúdo de elementos com a classe quote.
+
+Seletor Combinador de Descendentes (.container p):
+Aplica estilos a todos os <p> que são descendentes de .container.
+
+Seletor Combinador de Filhos Diretos (.container > p):
+Aplica estilos a todos os <p> que são filhos diretos de .container.
+
+Seletor de Grupo (h2, .grouped):
+Aplica estilos a todos os <h2> e todos os elementos com a classe grouped.
+
+</pre>
+</body>
+</html>

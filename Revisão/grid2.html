@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas de igual largura */
+            grid-template-rows: 100px 200px 100px; /* 3 linhas de alturas diferentes */
+            grid-gap: 10px; /* Espaço entre os itens */
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            height: 100vh;
+            border: 2px solid #000;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: lightcoral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item {
+            padding: 20px;
+            border: 1px solid #000;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .nested-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 5px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .nested-grid .item {
+            background-color: #ccc;
+            border: 1px solid #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header item">Header</div>
+        <div class="sidebar item">Sidebar</div>
+        <div class="main item">
+            Main Content
+            <div class="nested-grid">
+                <div class="item">Nested 1</div>
+                <div class="item">Nested 2</div>
+                <div class="item">Nested 3</div>
+                <div class="item">Nested 4</div>
+            </div>
+        </div>
+        <div class="footer item">Footer</div>
+    </div>
+
+    <pre>
+display: grid:
+Define o contêiner como um grid, transformando seus filhos diretos em itens de grid.
+
+grid-template-columns:
+Define o número de colunas no grid e suas larguras. repeat(3, 1fr) cria três colunas de largura igual.
+
+grid-template-rows:
+Define o número de linhas no grid e suas alturas. 100px 200px 100px cria três linhas com alturas específicas.
+
+grid-gap:
+Define o espaço entre os itens do grid.
+
+grid-template-areas:
+Define áreas nomeadas no grid para layout mais intuitivo. As áreas são especificadas em um formato de string.
+
+grid-area:
+Associa um item do grid a uma área nomeada definida em grid-template-areas.
+
+align-items:
+Alinha os itens do grid no eixo transversal (vertical por padrão). No exemplo, o uso de display: flex e align-items: center faz isso para os itens internos.
+
+justify-items:
+Alinha os itens do grid no eixo principal (horizontal por padrão).
+
+align-content:
+Alinha as linhas do grid quando há espaço extra no eixo transversal.
+
+justify-content:
+Alinha as colunas do grid quando há espaço extra no eixo principal.
+    </pre>
+</body>
+</html>

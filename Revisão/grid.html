@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Layout</title>
+    <style>
+        
+        body{
+            font-size: 30px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            background-color: lightgray;
+        }
+
+        .grid-item {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 1px solid darkred;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Grid Layout é um sistema de layout CSS poderoso e bidimensional
+        que permite criar layouts complexos de maneira fácil e consistente.
+    </pre>
+    <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+</body>
+</html>
